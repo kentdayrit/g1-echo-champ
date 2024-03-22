@@ -89,6 +89,10 @@ function App() {
           <button id="restartButton" onClick={handleRestart} >Restart</button>
         </div>
       </header>
+      <footer>
+        <p> - kd</p>
+    </footer>
+
     </div>
   );
 }
