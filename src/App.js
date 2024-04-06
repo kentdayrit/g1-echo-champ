@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import RandomWord from './helpers/randomWords.js'
+import TitleHeader from './components/layouts/TitleHeader.js'
 
 function App() {
   const [randomWord, setRandomWord] = useState('');
@@ -62,14 +63,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img>
-          Echo Champ! 
-          <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img>
-        </h1>
+      <TitleHeader/>
         <div id="game-container">
           <div id="question">{randomWord}</div>
+          <div>
+            {/* <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img>
+            <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img>
+            <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img> */}
+          </div>
+
           <input 
             type="text" 
             id="answer" 
@@ -77,7 +79,6 @@ function App() {
             onChange={handleInputChange}
             disabled={isDisabled}
             autocomplete="off" 
-            // onfocus="this.setAttribute('autocomplete', 'none');"
             value={inputValue}
           />
           <div id="timer">
@@ -88,7 +89,6 @@ function App() {
           
           <button id="restartButton" onClick={handleRestart} >Restart</button>
         </div>
-      </header>
       <footer>
         <p> - kd</p>
     </footer>

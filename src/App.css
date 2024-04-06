@@ -39,7 +39,7 @@
 
 #restartButton {
   padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
+  background-color: #16c39b;
   border: none;
   color: white;
   text-align: center;
@@ -48,11 +48,14 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px #0000001A;
+  border: 1px solid #93F8E0;
+  
 }
 
 #restartButton:hover {
-  background-color: #45a049; /* Darker Green */
+  background-color: #7ceed3; /* Darker Green */
 }
 
 footer {
@@ -76,7 +79,8 @@ footer nav {
 
 
 #game-container {
-  background-color: #fff;
+  min-height: 100vh;
+  background-color: #8c9194;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
@@ -84,8 +88,8 @@ footer nav {
 
 #question {
   margin-bottom: 10px;
-  font-size: 30px;
-  color: #000;
+  font-size: 50px;
+  color: #fff;
   user-select: none;
 }
 
@@ -94,6 +98,7 @@ footer nav {
   font-size: 30px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  outline: none;
 }
 
 #submit-btn {
@@ -110,8 +115,9 @@ footer nav {
 }
 
 #timer, #score {
-  color: #000;
+  color: #fff;
   margin-top: 10px;
+  font-size: 25px;
 }
 
 #time-remaining, #score-value {
