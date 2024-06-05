@@ -76,7 +76,7 @@ function InGame() {
   }
 
   useEffect(() => {
-    console.log(saveToSessionStorage());
+    saveToSessionStorage();
     scoreSpanRef.current.textContent = score; 
     wordPickerRandomizer();
   }, []);
