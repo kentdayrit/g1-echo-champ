@@ -49,7 +49,6 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 20px;
-  box-shadow: 2px 2px 4px #0000001A;
   border: 1px solid #93F8E0;
   
 }
@@ -128,4 +127,20 @@ footer nav {
   margin-bottom: 10px;
   font-size: 18px;
   color: green;
+}
+
+#HighScoreButton {
+  padding: 10px 20px;
+  background-color: rgb(236, 156, 8);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid white;
+
 }

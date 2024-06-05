@@ -1,0 +1,30 @@
+.ranked-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px 0 10px;
+}
+
+.ranked-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+  border-bottom: 1px solid #ddd; /* Add a subtle border between list items */
+}
+
+.ranked-list li:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.ranked-list li:first-child { /* Style the first list item (optional) */
+  font-weight: bold;
+}
+
+.ranked-list .rank-number {
+  text-align: center;
+  font-weight: bold;
+}
+
+.ranked-list .username {
+  flex: 1; /* Allow username to fill remaining space */
+}

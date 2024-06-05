@@ -10,13 +10,10 @@ function TitleHeader() {
     fontSize: 'calc(10px + 2vmin)',
     color: '#fff',
   }
+
   return (
     <div style={headerStyle}>
-      <h1>
-          {/* <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img> */}
-              Echo Champ!
-          {/* <img src="https://media.tenor.com/O6T25ctlsk0AAAAi/alien-dance.gif" width="40" height="60" alt="Alien Dance Sticker - Alien Dance Alien Dancing Stickers" ></img> */}
-      </h1>
+      <h1>Echo Champ!</h1>
     </div>
   );
 }

@@ -1,0 +1,66 @@
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  opacity: 100;
+}
+
+.offcanvas.active {
+  transition: transform 10.3s ease-in-out !important;
+  transform: translateX(0);
+}
+
+.high-score-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.high-score-list li {
+  margin-bottom: 5px; /* Add some space between list items */
+}
+
+.offcanvas-close-button {
+  padding: 10px 20px;
+  background-color: #4b5a57;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px #4b5a57;
+  border: 1px solid #4b5a57;
+}
+
+.offcanvas-footer {
+  margin-top: 10px;
+}
+
+.form {
+  width: 100%;
+  border: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+label {
+  display: block !important;
+  margin-bottom: 5px !important;
+}
+
+.input {
+  width: 85%;
+  margin-left: 10px !important;
+}
