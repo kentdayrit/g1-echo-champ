@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import RandomWord from '../../helpers/randomWords';
 import HighScoreOffCanva from '../canva/HighScoreOffCanva';
-import { createUser  } from '../../configs/firebase';
+import { createUser, getUsersById  } from '../../configs/firebase';
 
 function InGame() {
   const [randomWord, setRandomWord] = useState('');
@@ -45,15 +45,24 @@ function InGame() {
     setRandomWord(newWord);
   }
 
+  const checkPreviousUserScore = async (session, userScore, username) => {
+    try {
+      const response = await getUsersById(session);
+      if (!response?.data?.score || response.data.score < userScore) {
+        return await createUser(session, username, userScore);
+      }
+    } catch (err) {
+      console.error('Error fetching top users:', err);
+    }
+  };
+
+
   const handleCreateUser = async (username, userScore) => {
     try {
-      await createUser(sessionStorage.getItem('session'), username, userScore);
+      checkPreviousUserScore(sessionStorage.getItem('session'), userScore, username)
     } catch (err) {
       console.error('Error saving new user:', err);
-    } finally {
-      // setIsLoading(false);
     }
-
   }
 
   function gameTimer()

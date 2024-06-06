@@ -42,6 +42,22 @@ export const getUsersByScore = async (limit = 5) => {
   }
 };
 
+
+export const getUsersById = async (userId) => {
+  try {
+  const userRef = ref(database, `/users/${userId}`);
+  const snapshot = await get(userRef);
+  const data = snapshot.val();
+
+  return { data }; 
+  
+  } catch (err) {
+    console.error('Error creating user:', err);
+    
+  }
+};
+
+
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
   
