@@ -61,6 +61,7 @@ label {
 }
 
 .input {
+  text-align: center;
   width: 85%;
   margin-left: 10px !important;
 }
