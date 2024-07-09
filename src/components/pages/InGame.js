@@ -118,9 +118,16 @@ function InGame() {
     setIsOpen(false);
   };
 
+  const handlePreventDefault = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div id="game-container">
-      <div id="question">{randomWord}</div>
+      <div id="question" 
+        onCopy={handlePreventDefault}
+        onCut={handlePreventDefault}
+      >{randomWord}</div> 
       <input 
         type="text" 
         id="answer" 
@@ -129,6 +136,7 @@ function InGame() {
         disabled={isDisabled}
         autocomplete="off" 
         value={inputValue}
+        onPaste={handlePreventDefault}
       />
       <div id="timer">
         <span id="score-value">{totalTime}</span>
